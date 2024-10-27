@@ -1,0 +1,178 @@
+/* style.css */
+
+:root {
+    --cor-principal: #0063e5; /* Azul Blockbuster */
+    --cor-secundaria: #f2be22; /* Amarelo Blockbuster */
+    --cor-fundo: #0e011f; /* Azul escuro de fundo */
+    --cor-texto: #ffffff;
+    --cor-fundo-card: #1a0633; /* Fundo dos cards */
+}
+
+body {
+    font-family: 'Arial', sans-serif; 
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    margin: 0;
+}
+
+/* Header (Navbar) */
+.navbar {
+    background-color: var(--cor-principal);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--cor-principal);
+    font-weight: bold; 
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--cor-secundaria);
+}
+
+.btn-primary {
+    background-color: var(--cor-secundaria);
+    border-color: var(--cor-secundaria);
+    color: var(--cor-principal); 
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #d4a317; 
+    border-color: #d4a317;
+}
+
+
+
+/* Banner (Swiper) */
+#banner {
+    position: relative;
+}
+
+#banner .swiper-slide {
+    overflow: hidden; 
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover; 
+}
+
+
+.swiper-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px; 
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    color: var(--cor-texto);
+    border-radius: 10px;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: var(--cor-secundaria);
+    font-size: 2em; 
+}
+
+
+.swiper-pagination-bullet {
+    background-color: var(--cor-secundaria); 
+}
+
+
+
+
+
+/* Seções (Sobre, Serviços, Testemunhos, Contato) */
+#sobre, #servicos, #testemunhos, #contato {
+    padding: 40px 0;
+}
+
+h2 {
+    color: var(--cor-secundaria);
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* Serviços */
+#servicos-container .card {
+    background-color: var(--cor-principal);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    color: var(--cor-texto);
+    transition: transform 0.3s ease;
+}
+
+
+#servicos-container .card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title{
+    color: var(--cor-secundaria);
+}
+
+/* Testemunhos */
+#testemunhos .card {
+    background-color: var(--cor-fundo-card); 
+    color: var(--cor-texto); 
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+
+}
+#testemunhos .card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 auto 15px; 
+
+}
+
+
+/* Contato */
+
+
+#contato form {
+    max-width: 600px; 
+    margin: 0 auto; 
+}
+#contato label{
+    color: var(--cor-secundaria);
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Footer com ícones sociais */
+footer a svg{
+    fill: var(--cor-texto);
+    transition: fill 0.3s; 
+}
+
+footer a:hover svg {
+    fill: var(--cor-secundaria);
+}
+
+
+/* Responsividade*/
+@media (max-width: 768px) {
+
+    .swiper-caption {
+        font-size: 0.9em;
+    }
+
+}
